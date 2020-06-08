@@ -5,7 +5,7 @@
 *
 * Copyright Alyona Sviridova NTU KhPI
 *
-* Module 2 "Create a child  from the class Rectangle" task
+* Module 2 "Create a child  from the rectangle class" task
 */
 
 package Inheritance_of_rectangle;
@@ -86,7 +86,7 @@ public class Rectangle {
     * */
     @Override
     public String toString() {
-        return "Rectangle{" +
+        return "Inheritance_of_rectangle.Rectangle{" +
                 "id = " + id +
                 ", length = " + length +
                 ", width = " + width +

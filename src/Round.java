@@ -17,7 +17,7 @@
 
 import java.util.Objects;
 
-public class Round {
+public class Round implements IGeometry, IPackaging {
 
     private double radius;
     private double angle;
@@ -59,6 +59,7 @@ public class Round {
     * 3.1 Method for getting perimeter of a round
     * */
 
+    @Override
     public double getPerimeter() {
         return 2 * Math.PI * this.getRadius();
     }
@@ -75,6 +76,7 @@ public class Round {
     * 3.3 Method for getting sector area of a round
     * */
 
+    @Override
     public double getSectorArea() {
         return (this.getAngle() * Math.pow(this.getRadius(), 2)) / 2;
     }
@@ -134,5 +136,41 @@ public class Round {
         Round round = (Round) obj;
         return getRadius() == round.getRadius() &&
                 Double.compare(round.getAngle(), getAngle()) == 0;
+    }
+
+    /*
+    * Implemented toJSON() method from IPackaging interface
+    * */
+    @Override
+    public String toJSON() {
+
+        String json = "Round{"
+                + "\"" + "radius\" = " + this.getRadius()
+                + ","
+                + "\"" + "angle\" = " + this.getAngle()
+                + "}";
+        return json;
+    }
+
+    /*
+    * Implemented toXML() method from IPackaging interface
+    * */
+    @Override
+    public String toXML() {
+
+        String xml = "<Round>"
+                + "<radius>" + this.getRadius() + "</radius>"
+                + "<angle>" + this.getAngle() + "</angle>"
+                + "</Round>";
+        return xml;
+    }
+
+    /*
+    * Implemented toConsole() method from IPackaging interface
+    * */
+    @Override
+    public void toConsole() {
+
+        System.out.println(toString());
     }
 }

@@ -61,7 +61,7 @@ public class Circle extends Round {
 
     /*
     * Override toString() method for circle daughterly class
-    * */
+    **/
     @Override
     public String toString() {
         return "Circle{" +
@@ -73,4 +73,5 @@ public class Circle extends Round {
                 ", chord length=" + this.getChordLength() +
                 '}';
     }
+
 }

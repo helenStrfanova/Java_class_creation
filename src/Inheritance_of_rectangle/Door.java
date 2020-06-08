@@ -5,7 +5,7 @@
 *
 * Copyright Alyona Sviridova NTU KhPI
 *
-* Module 2 "Create a child  from the class Rectangle" task
+* Module 2 "Create a child  from the class Inheritance_of_rectangle.Rectangle" task
 */
 
 package Inheritance_of_rectangle;
