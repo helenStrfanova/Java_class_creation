@@ -257,7 +257,7 @@ public class Student {
         this.averageScoreOfZNO = averageScoreOfZNO;
     }
 
-    public void setSemesterGradePointAverage(double semesterGradePointAverage) {
+    public void setSemesterGradePointAverage(double semesterGradePointAverage){
         this.semesterGradePointAverage = semesterGradePointAverage;
     }
 
@@ -317,35 +317,62 @@ public class Student {
         if (isLivesInDormitory() != student.isLivesInDormitory()) return false;
         if (isBudget() != student.isBudget()) return false;
         if (isScholarship() != student.isScholarship()) return false;
-        if (getAmountOfArticles() != student.getAmountOfArticles()) return false;
+        if (getAmountOfArticles() != student.getAmountOfArticles())
+            return false;
         if (getAmountOfTheses() != student.getAmountOfTheses()) return false;
         if (isHeadman() != student.isHeadman()) return false;
-        if (Double.compare(student.getAverageScoreOfZNO(), getAverageScoreOfZNO()) != 0) return false;
-        if (Double.compare(student.getSemesterGradePointAverage(), getSemesterGradePointAverage()) != 0) return false;
-        if (getFirstName() != null ? !getFirstName().equals(student.getFirstName()) : student.getFirstName() != null)
+        if (Double.compare(student.getAverageScoreOfZNO(),
+                getAverageScoreOfZNO()) != 0) return false;
+        if (Double.compare(student.getSemesterGradePointAverage(),
+                getSemesterGradePointAverage()) != 0) return false;
+        if (getFirstName() != null ?
+                !getFirstName().equals(student.getFirstName())
+                : student.getFirstName() != null)
             return false;
-        if (getLastName() != null ? !getLastName().equals(student.getLastName()) : student.getLastName() != null)
+        if (getLastName() != null ?
+                !getLastName().equals(student.getLastName())
+                : student.getLastName() != null)
             return false;
-        if (getPatronimic() != null ? !getPatronimic().equals(student.getPatronimic()) : student.getPatronimic() != null)
+        if (getPatronimic() != null ?
+                !getPatronimic().equals(student.getPatronimic())
+                : student.getPatronimic() != null)
             return false;
-        if (getEmail() != null ? !getEmail().equals(student.getEmail()) : student.getEmail() != null) return false;
-        if (getDateOfBirth() != null ? !getDateOfBirth().equals(student.getDateOfBirth()) : student.getDateOfBirth() != null)
+        if (getEmail() != null ? !getEmail().equals(student.getEmail())
+                : student.getEmail() != null) return false;
+        if (getDateOfBirth() != null ?
+                !getDateOfBirth().equals(student.getDateOfBirth())
+                : student.getDateOfBirth() != null)
             return false;
-        if (getUniversityName() != null ? !getUniversityName().equals(student.getUniversityName()) : student.getUniversityName() != null)
+        if (getUniversityName() != null ?
+                !getUniversityName().equals(student.getUniversityName())
+                : student.getUniversityName() != null)
             return false;
-        if (getFacultyName() != null ? !getFacultyName().equals(student.getFacultyName()) : student.getFacultyName() != null)
+        if (getFacultyName() != null ?
+                !getFacultyName().equals(student.getFacultyName())
+                : student.getFacultyName() != null)
             return false;
-        if (getDepartment() != null ? !getDepartment().equals(student.getDepartment()) : student.getDepartment() != null)
+        if (getDepartment() != null ?
+                !getDepartment().equals(student.getDepartment())
+                : student.getDepartment() != null)
             return false;
-        if (getSpeciality() != null ? !getSpeciality().equals(student.getSpeciality()) : student.getSpeciality() != null)
+        if (getSpeciality() != null ?
+                !getSpeciality().equals(student.getSpeciality())
+                : student.getSpeciality() != null)
             return false;
-        if (getGroupName() != null ? !getGroupName().equals(student.getGroupName()) : student.getGroupName() != null)
+        if (getGroupName() != null ?
+                !getGroupName().equals(student.getGroupName())
+                : student.getGroupName() != null)
             return false;
-        if (getStudyForm() != null ? !getStudyForm().equals(student.getStudyForm()) : student.getStudyForm() != null)
+        if (getStudyForm() != null ?
+                !getStudyForm().equals(student.getStudyForm())
+                : student.getStudyForm() != null)
             return false;
-        if (getGraduateSupervisor() != null ? !getGraduateSupervisor().equals(student.getGraduateSupervisor()) : student.getGraduateSupervisor() != null)
+        if (getGraduateSupervisor() != null ?
+                !getGraduateSupervisor().equals(student.getGraduateSupervisor())
+                : student.getGraduateSupervisor() != null)
             return false;
-        return getGender() != null ? getGender().equals(student.getGender()) : student.getGender() == null;
+        return getGender() != null ? getGender().equals(student.getGender())
+                : student.getGender() == null;
     }
 
     /*
@@ -357,20 +384,30 @@ public class Student {
         int result;
         long temp;
         result = getFirstName() != null ? getFirstName().hashCode() : 0;
-        result = 31 * result + (getLastName() != null ? getLastName().hashCode() : 0);
-        result = 31 * result + (getPatronimic() != null ? getPatronimic().hashCode() : 0);
-        result = 31 * result + (getEmail() != null ? getEmail().hashCode() : 0);
+        result = 31 * result + (getLastName() != null ?
+                getLastName().hashCode() : 0);
+        result = 31 * result + (getPatronimic() != null ?
+                getPatronimic().hashCode() : 0);
+        result = 31 * result + (getEmail() != null ?
+                getEmail().hashCode() : 0);
         result = 31 * result + getPhoneNumber();
-        result = 31 * result + (getDateOfBirth() != null ? getDateOfBirth().hashCode() : 0);
+        result = 31 * result + (getDateOfBirth() != null ?
+                getDateOfBirth().hashCode() : 0);
         result = 31 * result + (isNonresident() ? 1 : 0);
         result = 31 * result + (isLivesInDormitory() ? 1 : 0);
-        result = 31 * result + (getUniversityName() != null ? getUniversityName().hashCode() : 0);
-        result = 31 * result + (getFacultyName() != null ? getFacultyName().hashCode() : 0);
-        result = 31 * result + (getDepartment() != null ? getDepartment().hashCode() : 0);
-        result = 31 * result + (getSpeciality() != null ? getSpeciality().hashCode() : 0);
-        result = 31 * result + (getGroupName() != null ? getGroupName().hashCode() : 0);
+        result = 31 * result + (getUniversityName() != null ?
+                getUniversityName().hashCode() : 0);
+        result = 31 * result + (getFacultyName() != null ?
+                getFacultyName().hashCode() : 0);
+        result = 31 * result + (getDepartment() != null ?
+                getDepartment().hashCode() : 0);
+        result = 31 * result + (getSpeciality() != null ?
+                getSpeciality().hashCode() : 0);
+        result = 31 * result + (getGroupName() != null ?
+                getGroupName().hashCode() : 0);
         result = 31 * result + (isBudget() ? 1 : 0);
-        result = 31 * result + (getStudyForm() != null ? getStudyForm().hashCode() : 0);
+        result = 31 * result + (getStudyForm() != null ?
+                getStudyForm().hashCode() : 0);
         result = 31 * result + (isScholarship() ? 1 : 0);
         result = 31 * result + getAmountOfArticles();
         result = 31 * result + getAmountOfTheses();
@@ -379,8 +416,10 @@ public class Student {
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         temp = Double.doubleToLongBits(getSemesterGradePointAverage());
         result = 31 * result + (int) (temp ^ (temp >>> 32));
-        result = 31 * result + (getGraduateSupervisor() != null ? getGraduateSupervisor().hashCode() : 0);
-        result = 31 * result + (getGender() != null ? getGender().hashCode() : 0);
+        result = 31 * result + (getGraduateSupervisor() != null ?
+                getGraduateSupervisor().hashCode() : 0);
+        result = 31 * result + (getGender() != null ?
+                getGender().hashCode() : 0);
         return result;
     }
 }
