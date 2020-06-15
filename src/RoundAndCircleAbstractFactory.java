@@ -23,10 +23,9 @@ public class RoundAndCircleAbstractFactory {
      */
     public static IGeometry create(double radius, double angle, double diameter, String type) {
 
-        if (type.equals("Round")) {
+        if (type.equals(Figure.ROUND))
             return new Round(radius, angle);
-        }
-        if (type.equals("Circle"))
+        if (type.equals(Figure.CIRCLE))
             return new Circle(radius, angle, diameter);
         else {
             return null;
