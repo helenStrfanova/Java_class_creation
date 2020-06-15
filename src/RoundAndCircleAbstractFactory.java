@@ -21,7 +21,8 @@ public class RoundAndCircleAbstractFactory {
      * @param diameter is diameter of Circle
      * @param type is figure type
      */
-    public static IGeometry create(double radius, double angle, double diameter, String type) {
+    public static IGeometry create(double radius, double angle,
+                                   double diameter, String type) {
 
         if (type.equals(Figure.ROUND))
             return new Round(radius, angle);
