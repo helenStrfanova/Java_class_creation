@@ -422,4 +422,46 @@ public class Student {
                 getGender().hashCode() : 0);
         return result;
     }
+
+    public static class Builder {
+        private Student studentToBuild;
+
+        public Builder() {
+            this.studentToBuild = new Student();
+        }
+
+        public Builder setSimilarTo(Student student) {
+            this.studentToBuild.speciality = student.speciality;
+            this.studentToBuild.dateOfBirth = student.dateOfBirth;
+            this.studentToBuild.phoneNumber = student.phoneNumber;
+            this.studentToBuild.email = student.email;
+            this.studentToBuild.patronimic = student.patronimic;
+            this.studentToBuild.lastName = student.lastName;
+            this.studentToBuild.amountOfArticles = student.amountOfArticles;
+            this.studentToBuild.firstName = student.firstName;
+            this.studentToBuild.averageScoreOfZNO = student.averageScoreOfZNO;
+            this.studentToBuild.amountOfTheses = student.amountOfTheses;
+            this.studentToBuild.budget = student.budget;
+            this.studentToBuild.department = student.department;
+            this.studentToBuild.facultyName = student.facultyName;
+            this.studentToBuild.gender = student.gender;
+            this.studentToBuild.graduateSupervisor = student.graduateSupervisor;
+            this.studentToBuild.groupName = student.groupName;
+            this.studentToBuild.headman = student.headman;
+            this.studentToBuild.livesInDormitory = student.livesInDormitory;
+            this.studentToBuild.nonresident = student.nonresident;
+            this.studentToBuild.scholarship = student.scholarship;
+            this.studentToBuild.semesterGradePointAverage =
+                    student.semesterGradePointAverage;
+            this.studentToBuild.studyForm = student.studyForm;
+            this.studentToBuild.universityName = student.universityName;
+
+            return this;
+        }
+
+        public Builder setSpeciality(String speciality){
+            studentToBuild.setSpeciality(speciality);
+            return this;
+        }
+    }
 }

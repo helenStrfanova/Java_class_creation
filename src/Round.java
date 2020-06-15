@@ -7,7 +7,7 @@
 *
 * Module 2 "Java class creation" task
 *
-* Create a class from the attached document according to the order in your group .  The class must contain
+* Create a class from the attached document according to the order in your group . The class must contain
 * 1. Constructor.
 * 2. Getters/Setters.
 * 3. 5 methods.
