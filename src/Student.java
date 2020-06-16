@@ -175,8 +175,8 @@ public class Student {
     }
 
     /*
-         *Setters for all class fields
-         * */
+     *Setters for all class fields
+     * */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -257,7 +257,7 @@ public class Student {
         this.averageScoreOfZNO = averageScoreOfZNO;
     }
 
-    public void setSemesterGradePointAverage(double semesterGradePointAverage){
+    public void setSemesterGradePointAverage(double semesterGradePointAverage) {
         this.semesterGradePointAverage = semesterGradePointAverage;
     }
 
@@ -270,8 +270,8 @@ public class Student {
     }
 
     /*
-         * Override toString() method
-         * */
+     * Override toString() method
+     * */
 
     @Override
     public String toString() {
@@ -378,7 +378,6 @@ public class Student {
     /*
      * Override hash() method.
      * */
-
     @Override
     public int hashCode() {
         int result;
@@ -423,13 +422,22 @@ public class Student {
         return result;
     }
 
+    /*
+     * Class Builder
+     * */
     public static class Builder {
         private Student studentToBuild;
 
+        /*
+         * Constructor for Builder
+         * */
         public Builder() {
             this.studentToBuild = new Student();
         }
 
+        /*
+         * Builder setSimilarTo() method.
+         * */
         public Builder setSimilarTo(Student student) {
             this.studentToBuild.speciality = student.speciality;
             this.studentToBuild.dateOfBirth = student.dateOfBirth;
@@ -459,8 +467,123 @@ public class Student {
             return this;
         }
 
-        public Builder setSpeciality(String speciality){
+        /*
+         * Setters for all student fields in Builder
+         * */
+        public Builder setSpeciality(String speciality) {
             studentToBuild.setSpeciality(speciality);
+            return this;
+        }
+
+        public Builder setDateOfBirth(String dateOfBirth) {
+            studentToBuild.setDateOfBirth(dateOfBirth);
+            return this;
+        }
+
+        public Builder setPhoneNumber(int phoneNumber) {
+            studentToBuild.setPhoneNumber(phoneNumber);
+            return this;
+        }
+
+        public Builder setEmail(String email) {
+            studentToBuild.setEmail(email);
+            return this;
+        }
+
+        public Builder setPatronimic(String patronimic) {
+            studentToBuild.setPatronimic(patronimic);
+            return this;
+        }
+
+        public Builder setLastName(String lastName) {
+            studentToBuild.setLastName(lastName);
+            return this;
+        }
+
+        public Builder setAmountOfArticles(int amountOfArticles) {
+            studentToBuild.setAmountOfArticles(amountOfArticles);
+            return this;
+        }
+
+        public Builder setFirstName(String firstName) {
+            studentToBuild.setFirstName(firstName);
+            return this;
+        }
+
+        public Builder setBudget(boolean budget) {
+            studentToBuild.setBudget(budget);
+            return this;
+        }
+
+        public Builder setAmountOfTheses(int amountOfTheses) {
+            studentToBuild.setAmountOfTheses(amountOfTheses);
+            return this;
+        }
+
+        public Builder setDepartment(String department) {
+            studentToBuild.setDepartment(department);
+            return this;
+        }
+
+        public Builder setFacultyName(String facultyName) {
+            studentToBuild.setFirstName(facultyName);
+            return this;
+        }
+
+        public Builder setAverageScoreOfZNO(double averageScoreOfZNO) {
+            studentToBuild.setAverageScoreOfZNO(averageScoreOfZNO);
+            return this;
+        }
+
+        public Builder setGender(String gender) {
+            studentToBuild.setGender(gender);
+            return this;
+        }
+
+        public Builder setGraduateSupervisor(String graduateSupervisor) {
+            studentToBuild.setGraduateSupervisor(graduateSupervisor);
+            return this;
+        }
+
+        public Builder setGroupName(String groupName) {
+            studentToBuild.setGroupName(groupName);
+            return this;
+        }
+
+        public Builder setHeadman(boolean headman) {
+            studentToBuild.setHeadman(headman);
+            return this;
+        }
+
+        public Builder setLivesInDormitory(boolean livesInDormitory) {
+            studentToBuild.setLivesInDormitory(livesInDormitory);
+            return this;
+        }
+
+        public Builder setNonresident(boolean nonresident) {
+            studentToBuild.setNonresident(nonresident);
+            return this;
+        }
+
+        public Builder setScholarship(boolean scholarship) {
+            studentToBuild.setScholarship(scholarship);
+            return this;
+        }
+
+        public Builder setSemesterGradePointAverage(
+                double semesterGradePointAverage) {
+            studentToBuild.setSemesterGradePointAverage(
+                    semesterGradePointAverage);
+            return this;
+        }
+
+        public Builder setStudyForm(String studyForm) {
+            studentToBuild.setStudyForm(studyForm);
+            return this;
+        }
+
+        public Builder setUniversityName(String universityName) {
+            studentToBuild.setUniversityName(universityName);
             return this;
         }
     }
